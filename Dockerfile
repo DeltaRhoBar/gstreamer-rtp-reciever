@@ -18,4 +18,4 @@ WORKDIR "$HOME"
 COPY --chmod=755 --chown=1000:1000 ./services/${RECEIVER_VERSION} ./start.sh
 
 USER receiver
-ENTRYPOINT ["start.sh"]
+ENTRYPOINT ["./start.sh"]
