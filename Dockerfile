@@ -15,7 +15,7 @@ RUN groupadd --gid 1000 receiver \
   && chown -R receiver:receiver "$HOME"
 
 WORKDIR "$HOME"
-COPY --chmod=755 --chown=1000:1000 ./services/${RECEIVER_VERSION} ./start.sh
+COPY --chmod=755 --chown=1000:1000 ./services/${RECEIVER_VERSION} /home/receiver/start.sh
 
 USER receiver
-ENTRYPOINT [/home/receiver/start.sh]
+ENTRYPOINT ["start.sh"]
