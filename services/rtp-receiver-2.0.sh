@@ -5,4 +5,4 @@ gst-launch-1.0 udpsrc port=46000 buffer-size=65536 ! \
     rtpjitterbuffer latency=200 ! \
     rtpL16depay ! \
     audioconvert ! \
-    pulsesink stream-properties="device=extend_2.0_4.1"
+    pulsesink device="extend_2.0_4.1"
